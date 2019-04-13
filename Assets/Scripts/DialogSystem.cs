@@ -20,6 +20,9 @@ public class DialogSystem : MonoBehaviour
 
     private NoodleNPC activeNoodle;
 
+    [SerializeField]
+    private GameObject gameOverSprite;
+
     private int currentChoice;
 
 
@@ -182,7 +185,8 @@ public class DialogSystem : MonoBehaviour
         currentTurn++;
         if (currentTurn >= numberOfTurns)
         {
-            GameObject outro = GameObject.Find("Outro");
+            if (gameOverSprite != null)
+                gameOverSprite.SetActive(true);
         }
     }
 
