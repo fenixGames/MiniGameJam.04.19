@@ -16,7 +16,7 @@ public class NoodleNPC : MonoBehaviour
     private string name;
 
     private bool dialogStarted;
-
+    public bool isExausted;
 
     private DialogSystem dialogSystem;
 

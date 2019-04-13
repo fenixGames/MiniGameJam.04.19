@@ -524,9 +524,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec74413672bd9e448177b1490b21bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingQuestion: {fileID: 11400000, guid: c52fd576f414aa6419c6be3121c7de46, type: 2}
+  dialogData: {fileID: 11400000, guid: ef13bf5fd540aa84ea1abd64f0e883eb, type: 2}
   sprite: {fileID: 0}
   name: 
+  isExausted: 0
 --- !u!4 &1251567076
 Transform:
   m_ObjectHideFlags: 0
