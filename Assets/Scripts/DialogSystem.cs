@@ -171,12 +171,13 @@ public class DialogSystem : MonoBehaviour
         if(currentChoice == activeNoodle.dialogData.rightAnswer)
             activeNoodle.isExausted = true;
 
+        BlinkingNPC blinking = activeNoodle.GetComponent<BlinkingNPC>();
+        blinking.isBlinking = false;
+        activeNoodle.GetComponent<AudioSource>().Stop();
+
         activeNoodle.dialogStarted = false;
         gameObject.SetActive(false);
         activeNoodle = null;
-
-        activeNoodle.GetComponent<BlinkingNPC>().isBlinking = false;
-
 
         currentTurn++;
         if (currentTurn >= numberOfTurns)
