@@ -148,12 +148,7 @@ public class DialogSystem : MonoBehaviour
             currentChoice++;
             ActivateChoice();
         }
-    }
-
-    private void ShowAnswer()
-    {
-
-    }
+    }  
 
 
     private void EndDialog()

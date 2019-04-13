@@ -19,13 +19,10 @@ public class NoodleNPC : MonoBehaviour
 
     public bool isExausted;
 
+    [SerializeField]
     private DialogSystem dialogSystem;
 
-    private void Awake()
-    {
-        dialogSystem = FindObjectOfType<DialogSystem>();
-        
-    }
+ 
 
 
     public void StartDialogSystem()
