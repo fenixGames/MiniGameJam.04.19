@@ -15,7 +15,7 @@ public class NoodleNPC : MonoBehaviour
     [SerializeField]
     private string name;
 
-    private bool dialogStarted;
+    public bool dialogStarted;
 
     public bool isExausted;
 
@@ -33,7 +33,7 @@ public class NoodleNPC : MonoBehaviour
     
     private void OnMouseDown()
     {
-        if (!dialogStarted)
+        if (!dialogStarted && ! isExausted)
         {
             StartDialogSystem();
             dialogStarted = true;

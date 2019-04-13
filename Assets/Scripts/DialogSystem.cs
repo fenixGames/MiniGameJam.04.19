@@ -156,6 +156,7 @@ public class DialogSystem : MonoBehaviour
         if(currentChoice == activeNoodle.dialogData.rightAnswer)
             activeNoodle.isExausted = true;
 
+        activeNoodle.dialogStarted = false;
         gameObject.SetActive(false);
     }
 
