@@ -15,11 +15,11 @@ public class BlinkingNPC : MonoBehaviour
 
     private void Update()
     {
-        if (isBlinking)
-        {
-            scaleIncrease = (Mathf.PingPong(Time.time * speed, maxExpand));
-            transform.localScale = new Vector3((1 + scaleIncrease), (1 + scaleIncrease), 1);
-        }
+        //if (isBlinking)
+        //{
+        //    scaleIncrease = (Mathf.PingPong(Time.time * speed, maxExpand));
+        //    transform.localScale = new Vector3((1 + scaleIncrease), (1 + scaleIncrease), 1);
+        //}
 
     }
 }
