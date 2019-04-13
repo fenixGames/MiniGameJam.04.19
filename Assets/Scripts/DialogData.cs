@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class DialogData: ScriptableObject
 {
+
+
     
     [SerializeField]
     private string[] introduction;
