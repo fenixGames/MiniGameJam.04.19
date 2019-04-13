@@ -8,10 +8,6 @@ public class NoodleNPC : MonoBehaviour
     [SerializeField]
     public DialogData dialogData;
 
-
-    [SerializeField]
-    private Sprite sprite;
-
     [SerializeField]
     private string name;
 
