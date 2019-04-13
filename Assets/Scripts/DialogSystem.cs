@@ -46,6 +46,8 @@ public class DialogSystem : MonoBehaviour
         npcSpeech.text = noodle.dialogData.GetNextIntroduction();
         npcSpeech.gameObject.SetActive(true);
 
+        activeNoodle.GetComponent<BlinkingNPC>().isBlinking = true;
+
         
     }
 
@@ -172,6 +174,9 @@ public class DialogSystem : MonoBehaviour
         activeNoodle.dialogStarted = false;
         gameObject.SetActive(false);
         activeNoodle = null;
+
+        activeNoodle.GetComponent<BlinkingNPC>().isBlinking = false;
+
 
         currentTurn++;
         if (currentTurn >= numberOfTurns)
