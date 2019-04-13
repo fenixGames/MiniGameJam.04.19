@@ -6,7 +6,7 @@ public class NoodleNPC : MonoBehaviour
 {
   
     [SerializeField]
-    private Question openingQuestion;
+    public DialogData dialogData;
 
 
     [SerializeField]
@@ -23,21 +23,24 @@ public class NoodleNPC : MonoBehaviour
     private void Awake()
     {
         dialogSystem = FindObjectOfType<DialogSystem>();
+        dialogData.currentAnswer = 0;
+        dialogData.currentIntroduction = 0;
     }
 
 
     public void StartDialogSystem()
     {
         dialogSystem.gameObject.SetActive(true);
-        dialogSystem.InitializeDialog(openingQuestion);
+        dialogSystem.InitializeDialog(this);
     }
-
-
-
+    
     private void OnMouseDown()
     {
-        StartDialogSystem();
-        dialogStarted = true;
+        if (!dialogStarted)
+        {
+            StartDialogSystem();
+            dialogStarted = true;
+        }
     }
 
 

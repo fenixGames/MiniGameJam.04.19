@@ -16,30 +16,24 @@ public class DialogSystem : MonoBehaviour
     [SerializeField]
     private GameObject[] choicePanel;
 
-    private Question questionData;
+    private NoodleNPC activeNoodle;
 
     private int currentChoice;
 
 
-    [SerializeField]
-    private Color choiceBackGroundcolor;
-
-
-
-
-    private enum State { opening, choices, answers };
+    enum State { opening, questions, answers };
 
     private State currentState;
    
 
 
-    public void InitializeDialog(Question question)
+    public void InitializeDialog(NoodleNPC noodle)
     {
         DeactivateChoiceText();
         
-        questionData = question;
+        activeNoodle = noodle;
         currentState = State.opening;
-        npcSpeech.text = question.openingStatement;
+        npcSpeech.text = noodle.dialogData.GetNextIntroduction();
         npcSpeech.gameObject.SetActive(true);
     }
 
@@ -62,8 +56,16 @@ public class DialogSystem : MonoBehaviour
             switch (currentState)
             {
                 case State.opening:
-                    Showchoices();
-                    currentState ++;
+                    string text = activeNoodle.dialogData.GetNextIntroduction();
+                    if (text != null)
+                    {
+                        npcSpeech.text = text;
+                    }
+                    else
+                    {
+                        Showchoices();
+                        currentState++;
+                    }
                     break;
             }
 
@@ -84,7 +86,7 @@ public class DialogSystem : MonoBehaviour
     {
         npcSpeech.gameObject.SetActive(false);
         currentChoice = 0;
-
+        ActivateChoice();
 
 
         for (int i = 0; i < choicePanel.Length; i++)
@@ -94,25 +96,29 @@ public class DialogSystem : MonoBehaviour
     }
 
 
+    private void ActivateChoice()
+    {
+        foreach (var panel in choicePanel)
+            panel.GetComponent<Image>().enabled = false;
+
+        choicePanel[currentChoice].GetComponent<Image>().enabled = true;
+    }
 
     private void MoveArrowUp()
     {
         if (currentChoice > 0)
         {
             currentChoice --;
-
-            //arrow.transform.position = playerChoices[arrowPosition].transform.position;
-            //arrow.transform.position -= new Vector3(arrowOffset, 0, 0);
+            ActivateChoice();
         }
     }
 
     private void MoveArrowDown()
     {
-        if (currentChoice < questionData.choices.Length)
+        if (currentChoice < choicePanel.Length - 1)
         {
             currentChoice++;
-            //arrow.transform.position = playerChoices[arrowPosition].transform.position;
-            //arrow.transform.position -= new Vector3(arrowOffset, 0, 0);
+            ActivateChoice();
         }
     }
 
