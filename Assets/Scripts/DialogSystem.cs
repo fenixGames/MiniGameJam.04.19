@@ -182,7 +182,7 @@ public class DialogSystem : MonoBehaviour
         currentTurn++;
         if (currentTurn >= numberOfTurns)
         {
-            // End game
+            GameObject outro = GameObject.Find("Outro");
         }
     }
 
