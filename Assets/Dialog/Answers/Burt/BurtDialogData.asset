@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9abcfa5c37eda4e8045c6ae967dbd9, type: 3}
+  m_Name: BurtDialogData
+  m_EditorClassIdentifier: 
+  introduction:
+  - Listen to me, friend! Listen to my words and TREMBLE! Brrrrrrrrrr!
+  - "The CARBONARA GOD\u2122 spoke to me, friend. Its greasy words invaded my body
+    and soul."
+  - "And then\u2026 I saw\u2026 "
+  - " I saw my future, my destiny, my place in this unforgiving universe.\r\n"
+  - "With unbelievable clarity, undoubtable certainty\u2026 It was GLORIOUS!"
+  - "You might not believe my words, friend. I understand. It\u2019s hard, like looking
+    directly into 1000 suns."
+  - I saw my FINAL FORM!
+  - "...I was\u2026"
+  - "The most beautiful MOTHER\u2019S DAY PASTA NECKLACE."
+  - AWESOME, right? Such a noble task. Such beauty.
+  - "I\u2019m not supposed to be here in this pot, friend. I am not to be cooked or
+    EATEN! I am necklace material."
+  answers:
+  - {fileID: 11400000, guid: 937bb748854b26f49be6d3c0be6f9f93, type: 2}
+  - {fileID: 11400000, guid: 8605bfd91c507284587cb6f91b20ea56, type: 2}
+  - {fileID: 11400000, guid: 02ec309f7a66d0044a8a4f59dba6f85b, type: 2}
+  currentAnswer: 0
+  currentIntroduction: 0
+  rightAnswer: 2

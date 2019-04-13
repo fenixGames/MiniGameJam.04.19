@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e353f70d985e9e14c93f50f444e28e04, type: 3}
+  m_Name: MelemaAnswersCrying
+  m_EditorClassIdentifier: 
+  answers:
+  - "\u2026"
+  - "I don\u2019t wanna\u2026"
+  - "I don\u2019t wanna cry."
+  - "Don\u2019t I wanna cry?"
+  - Sometimes those feelings are like a microwave lasagna!
+  - "They taste like nothing, they don\u2019t feed me."
+  - "Everybody is always blabbering about joy and positivity \u2014 but what if I
+    want to be miserable sometimes?"
+  - What if I want to be angry? What if I want you to go suck a rigatoni.
+  - This is real. I feel real.
+  - 'Thank you. Not get your fucken stupid face outta my general viscinity.
+
+'

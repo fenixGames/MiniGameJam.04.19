@@ -53,6 +53,9 @@ public class DialogSystem : MonoBehaviour
 
     private void Update()
     {
+        if (activeNoodle == null)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             switch (currentState)
@@ -158,6 +161,7 @@ public class DialogSystem : MonoBehaviour
 
         activeNoodle.dialogStarted = false;
         gameObject.SetActive(false);
+        activeNoodle = null;
     }
 
 

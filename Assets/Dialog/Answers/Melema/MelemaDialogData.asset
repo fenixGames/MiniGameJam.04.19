@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9abcfa5c37eda4e8045c6ae967dbd9, type: 3}
+  m_Name: MelemaDialogData
+  m_EditorClassIdentifier: 
+  introduction:
+  - How ye doing today, bro? Nice pot here, I dig the furniture. Lovely curtains.
+  - Lovely lovely love-ly-doo-doo! Iiiiiiihahahaha!
+  - "You don\u2019t look so jolly yourself, bro. You should stick around me!"
+  - "I\u2019m a motherfuken happiness beast, bro! Yeeee-haaaaw!"
+  answers:
+  - {fileID: 11400000, guid: f83b3c4d78ee3b6469cf33b944ae5862, type: 2}
+  - {fileID: 11400000, guid: d2788f346e05a5544bb69a39ed3f5521, type: 2}
+  - {fileID: 11400000, guid: dac83ce27a68a0642a2ab5dd8d649f33, type: 2}
+  currentAnswer: 0
+  currentIntroduction: 0
+  rightAnswer: 1

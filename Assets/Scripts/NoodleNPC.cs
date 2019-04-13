@@ -18,9 +18,6 @@ public class NoodleNPC : MonoBehaviour
     [SerializeField]
     private DialogSystem dialogSystem;
 
- 
-
-
     public void StartDialogSystem()
     {
         dialogSystem.gameObject.SetActive(true);
