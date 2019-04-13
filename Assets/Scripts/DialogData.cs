@@ -7,6 +7,7 @@ public class DialogData: ScriptableObject
 {
     
     [SerializeField]
+    [TextArea(3, 10)]
     private string[] introduction;
 
     [SerializeField]
