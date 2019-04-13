@@ -37,6 +37,8 @@ public class DialogSystem : MonoBehaviour
         currentState = State.opening;
         npcSpeech.text = noodle.dialogData.GetNextIntroduction();
         npcSpeech.gameObject.SetActive(true);
+
+        
     }
 
     private void DeactivateChoiceText()

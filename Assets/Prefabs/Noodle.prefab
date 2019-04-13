@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9084312465219274035}
   - component: {fileID: 9084312465219274032}
   - component: {fileID: 5480361981294502870}
+  - component: {fileID: 3690220270633821590}
   m_Layer: 0
   m_Name: Noodle
   m_TagString: Untagged
@@ -138,3 +139,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growOnMouseOverInPercent: 10
+--- !u!114 &3690220270633821590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084312465219274039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d937bdaa1322f468c2d9362ff5676d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBlinking: 0
+  maxExpand: 1
+  speed: 1
