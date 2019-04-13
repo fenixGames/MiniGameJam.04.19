@@ -25,6 +25,7 @@ public class NoodleNPC : MonoBehaviour
     
     private void OnMouseDown()
     {
+        GetComponent<AudioSource>().Play();
         if (!dialogStarted && ! isExausted)
         {
             StartDialogSystem();
