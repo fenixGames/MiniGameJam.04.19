@@ -10,8 +10,10 @@ public class DialogSystem : MonoBehaviour
     [SerializeField]
     private Text npcSpeech;
 
+    [SerializeField]
+    private int numberOfTurns;
 
-
+    private int currentTurn;
 
     [SerializeField]
     private GameObject[] choicePanel;
@@ -21,15 +23,21 @@ public class DialogSystem : MonoBehaviour
     private int currentChoice;
 
 
-
     enum State { opening, questions, answers };
 
     private State currentState;
 
-
+    private void Awake()
+    {
+        currentTurn = 0;
+    }
 
     public void InitializeDialog(NoodleNPC noodle)
     {
+        if (currentTurn >= numberOfTurns)
+            return;
+
+        gameObject.SetActive(true);
         DeactivateChoiceText();
         noodle.dialogData.currentAnswer = 0;
         noodle.dialogData.currentIntroduction = 0;
@@ -164,14 +172,12 @@ public class DialogSystem : MonoBehaviour
         activeNoodle.dialogStarted = false;
         gameObject.SetActive(false);
         activeNoodle = null;
+
+        currentTurn++;
+        if (currentTurn >= numberOfTurns)
+        {
+            // End game
+        }
     }
-
-
-
-
-
-
-
-
 
 }
