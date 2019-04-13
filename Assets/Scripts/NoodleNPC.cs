@@ -20,7 +20,6 @@ public class NoodleNPC : MonoBehaviour
 
     public void StartDialogSystem()
     {
-        dialogSystem.gameObject.SetActive(true);
         dialogSystem.InitializeDialog(this);
     }
     
