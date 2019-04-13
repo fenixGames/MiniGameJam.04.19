@@ -15,6 +15,9 @@ public class BubbleSpawner : MonoBehaviour
     [SerializeField]
     private GameObject bubblePrefab;
 
+    [SerializeField]
+    private float spawnFrequency, smallSize, bigSize;
+
 
     private float minimumY, minimumX, maximumY, maximumX;
 
@@ -28,16 +31,11 @@ public class BubbleSpawner : MonoBehaviour
         maximumY = rend.bounds.max.y;
 
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+     
 
     void Update()
-    {
-     
+    {     
+        if(spawnFrequency > Random.RandomRange(0,100))
         Spawnbubble();
     }
 
@@ -45,7 +43,9 @@ public class BubbleSpawner : MonoBehaviour
     void Spawnbubble()
     {
         Vector2 spawnPosition = new Vector2(Random.RandomRange(minimumX, maximumX), Random.RandomRange(minimumY, maximumY));
-        Instantiate(bubblePrefab, spawnPosition, Quaternion.identity);
+        Bubble newbubble = Instantiate(bubblePrefab, spawnPosition, Quaternion.identity).GetComponent<Bubble>();
+        newbubble.SetSizeAndSpeed(Random.Range(smallSize, bigSize));
+
 
     }
 }
