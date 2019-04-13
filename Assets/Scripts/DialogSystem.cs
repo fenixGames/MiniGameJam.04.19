@@ -21,12 +21,6 @@ public class DialogSystem : MonoBehaviour
     private int currentChoice;
 
 
-    [SerializeField]
-    private Color choiceBackGroundcolor;
-
-
-
-
     private enum State { opening, choices, answers };
 
     private State currentState;
@@ -84,7 +78,7 @@ public class DialogSystem : MonoBehaviour
     {
         npcSpeech.gameObject.SetActive(false);
         currentChoice = 0;
-
+        ActivateChoice();
 
 
         for (int i = 0; i < choicePanel.Length; i++)
@@ -94,13 +88,20 @@ public class DialogSystem : MonoBehaviour
     }
 
 
+    private void ActivateChoice()
+    {
+        foreach (var panel in choicePanel)
+            panel.GetComponent<Image>().enabled = false;
+
+        choicePanel[currentChoice].GetComponent<Image>().enabled = true;
+    }
 
     private void MoveArrowUp()
     {
         if (currentChoice > 0)
         {
             currentChoice --;
-
+            ActivateChoice();
             //arrow.transform.position = playerChoices[arrowPosition].transform.position;
             //arrow.transform.position -= new Vector3(arrowOffset, 0, 0);
         }
@@ -111,6 +112,7 @@ public class DialogSystem : MonoBehaviour
         if (currentChoice < questionData.choices.Length)
         {
             currentChoice++;
+            ActivateChoice();
             //arrow.transform.position = playerChoices[arrowPosition].transform.position;
             //arrow.transform.position -= new Vector3(arrowOffset, 0, 0);
         }
