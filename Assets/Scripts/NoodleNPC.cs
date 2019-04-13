@@ -17,14 +17,14 @@ public class NoodleNPC : MonoBehaviour
 
     private bool dialogStarted;
 
+    public bool isExausted;
 
     private DialogSystem dialogSystem;
 
     private void Awake()
     {
         dialogSystem = FindObjectOfType<DialogSystem>();
-        dialogData.currentAnswer = 0;
-        dialogData.currentIntroduction = 0;
+        
     }
 
 

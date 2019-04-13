@@ -9,7 +9,7 @@ public class DialogSystem : MonoBehaviour
 
     [SerializeField]
     private Text npcSpeech;
-       
+
 
 
 
@@ -21,16 +21,18 @@ public class DialogSystem : MonoBehaviour
     private int currentChoice;
 
 
+
     enum State { opening, questions, answers };
 
     private State currentState;
-   
+
 
 
     public void InitializeDialog(NoodleNPC noodle)
     {
         DeactivateChoiceText();
-        
+        noodle.dialogData.currentAnswer = 0;
+        noodle.dialogData.currentIntroduction = 0;
         activeNoodle = noodle;
         currentState = State.opening;
         npcSpeech.text = noodle.dialogData.GetNextIntroduction();
@@ -51,7 +53,7 @@ public class DialogSystem : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             switch (currentState)
             {
@@ -67,15 +69,41 @@ public class DialogSystem : MonoBehaviour
                         currentState++;
                     }
                     break;
+
+                case State.questions:
+                    currentState++;
+
+                    foreach (var panel in choicePanel)
+                        panel.SetActive(false);
+
+                    npcSpeech.gameObject.SetActive(true);
+                    npcSpeech.text = activeNoodle.dialogData.GetNextAnswer(currentChoice);
+                    break;
+
+                case State.answers:
+
+                    string answerText = activeNoodle.dialogData.GetNextAnswer(currentChoice);
+                    if (answerText != null)
+                    {
+                        npcSpeech.text = answerText;
+                    }
+                    else
+                    {
+                        EndDialog();
+                        currentState++;
+                    }
+                    break;
+
+
             }
 
         }
 
 
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && currentState == State.questions)
             MoveArrowDown();
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && currentState == State.questions)
             MoveArrowUp();
 
     }
@@ -108,7 +136,7 @@ public class DialogSystem : MonoBehaviour
     {
         if (currentChoice > 0)
         {
-            currentChoice --;
+            currentChoice--;
             ActivateChoice();
         }
     }
@@ -122,13 +150,24 @@ public class DialogSystem : MonoBehaviour
         }
     }
 
-    public void ChoiceSelected()
+    private void ShowAnswer()
     {
-       // questionData.answer[arrowPosition]
+
     }
 
 
-    
+    private void EndDialog()
+    {
+        if(currentChoice == activeNoodle.dialogData.rightAnswer)
+            activeNoodle.isExausted = true;
+
+        gameObject.SetActive(false);
+    }
+
+
+
+
+
 
 
 

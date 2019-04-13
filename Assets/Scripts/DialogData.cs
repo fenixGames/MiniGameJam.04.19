@@ -10,17 +10,21 @@ public class DialogData: ScriptableObject
     private string[] introduction;
 
     [SerializeField]
-    private string[] answers;
+    private Answers[] answers;
     
     public int currentAnswer = 0;
     public int currentIntroduction = 0;
 
-    public string GetNextAnswer()
+
+    public int rightAnswer;
+
+
+    public string GetNextAnswer(int choice)
     {
-        if (currentAnswer >= answers.Length)
+        if (currentAnswer >= answers[choice].answers.Length)
             return null;
         currentAnswer++;
-        return answers[currentAnswer - 1];
+        return answers[choice].answers[currentAnswer -1];
     }
 
     public string GetNextIntroduction()
