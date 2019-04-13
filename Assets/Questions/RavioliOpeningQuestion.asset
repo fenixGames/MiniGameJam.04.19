@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad09fed36f95e040b43d268c4357242, type: 3}
+  m_Name: RavioliOpeningQuestion
+  m_EditorClassIdentifier: 
+  openingStatement: I'm a Ravioli!
+  choices:
+  - jump out!
+  - die in here!
+  answer:
+  - {fileID: 11400000, guid: f34b77aa016170d49a8f74b9a56180e3, type: 2}
+  - {fileID: 11400000, guid: ef13bf5fd540aa84ea1abd64f0e883eb, type: 2}
