@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e353f70d985e9e14c93f50f444e28e04, type: 3}
+  m_Name: XopiAnswersAppreciation
+  m_EditorClassIdentifier: 
+  answers:
+  - When I close my tiny pasta eyes, I see those things as if they were hhmmm real.
+  - "But deep in my heart I know what\u2019s really real."
+  - I remember my early days, when I was wheat in the plains of Bulgaria. I remember
+    the wind.
+  - I remember being processed into pasta in Germany. Those were the good days.
+  - "Hey I didn\u2019t get to go to space, but I did travel through Toscana \u2014
+    how cool is that, mate?"
+  - When I close my tiny pasta eyes, I hmmmm remember my friends at the supermarket.
+  - "This has been a great life and I\u2019m proud, mate."

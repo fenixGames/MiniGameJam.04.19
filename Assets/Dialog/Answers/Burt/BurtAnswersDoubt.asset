@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e353f70d985e9e14c93f50f444e28e04, type: 3}
+  m_Name: BurtAnswersDoubt
+  m_EditorClassIdentifier: 
+  answers:
+  - "What\u2026 Who\u2026 Why\u2026 Where did certainty go? What did you do to me?"
+  - "I knew from the start I could be wrong\u2026 but\u2026 wait.\t"
+  - Did I ever really consider this?
+  - "Perhaps the CARBONARA GOD\u2122 is a gluten-free dream. No substance."
+  - Perhaps there is no fixed destiny, but a bunch of choices.
+  - Do I want to be eaten? I never thought of that.
+  - Now I have no choice but to choose! I could be GLORIOUSLY eaten!
+  - This is my LAST STAND! I will die BLISSFULLY, friend!

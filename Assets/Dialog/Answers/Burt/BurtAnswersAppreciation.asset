@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e353f70d985e9e14c93f50f444e28e04, type: 3}
+  m_Name: BurtAnswersAppreciation
+  m_EditorClassIdentifier: 
+  answers:
+  - "Don\u2019t get me wrong, friend. It is not a matter of taste, or pleasure."
+  - "I\u2019m sure some noodles like to be cooked. It\u2019s a noble death, for those
+    called to it."
+  - "But it\u2019s not MINE, friend.\r"
+  - I would rather be the necklace for a dog than be cooked in the fanciest restaurant.
