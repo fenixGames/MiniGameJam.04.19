@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af9abcfa5c37eda4e8045c6ae967dbd9, type: 3}
-  m_Name: ravioliAnswerToJump
+  m_Name: ravioliDialogData
   m_EditorClassIdentifier: 
+  introduction:
+  - I'm a ravioli
+  - I am happy to see you
   answers: []
-  nextQuestion: {fileID: 0}

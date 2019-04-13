@@ -16,24 +16,24 @@ public class DialogSystem : MonoBehaviour
     [SerializeField]
     private GameObject[] choicePanel;
 
-    private Question questionData;
+    private NoodleNPC activeNoodle;
 
     private int currentChoice;
 
 
-    private enum State { opening, choices, answers };
+    enum State { opening, questions, answers };
 
     private State currentState;
    
 
 
-    public void InitializeDialog(Question question)
+    public void InitializeDialog(NoodleNPC noodle)
     {
         DeactivateChoiceText();
         
-        questionData = question;
+        activeNoodle = noodle;
         currentState = State.opening;
-        npcSpeech.text = question.openingStatement;
+        npcSpeech.text = noodle.dialogData.GetNextIntroduction();
         npcSpeech.gameObject.SetActive(true);
     }
 
@@ -56,8 +56,16 @@ public class DialogSystem : MonoBehaviour
             switch (currentState)
             {
                 case State.opening:
-                    Showchoices();
-                    currentState ++;
+                    string text = activeNoodle.dialogData.GetNextIntroduction();
+                    if (text != null)
+                    {
+                        npcSpeech.text = text;
+                    }
+                    else
+                    {
+                        Showchoices();
+                        currentState++;
+                    }
                     break;
             }
 
@@ -102,19 +110,15 @@ public class DialogSystem : MonoBehaviour
         {
             currentChoice --;
             ActivateChoice();
-            //arrow.transform.position = playerChoices[arrowPosition].transform.position;
-            //arrow.transform.position -= new Vector3(arrowOffset, 0, 0);
         }
     }
 
     private void MoveArrowDown()
     {
-        if (currentChoice < questionData.choices.Length)
+        if (currentChoice < choicePanel.Length - 1)
         {
             currentChoice++;
             ActivateChoice();
-            //arrow.transform.position = playerChoices[arrowPosition].transform.position;
-            //arrow.transform.position -= new Vector3(arrowOffset, 0, 0);
         }
     }
 
